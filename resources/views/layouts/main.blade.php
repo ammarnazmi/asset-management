@@ -9,10 +9,11 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+
     <!-- Script -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
+    <script src="{{ asset('js/app.js') }}"></script>
 </head>
 <body>
 
@@ -68,7 +69,6 @@
 
      @yield('content')
      @yield('script')
-
      <script>
         function Openbar() {
             document.querySelector('.sidebar').classList.toggle('-translate-x-full');
