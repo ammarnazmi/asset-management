@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             AssetStatus::class,
             AssetType::class,
             AssetSeeder::class,
+            UserSeeder::class,
         ]);
     }
 }

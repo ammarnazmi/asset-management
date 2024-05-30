@@ -59,10 +59,14 @@
                  </a>
               </li>
               <li>
-                  <a href="#" class="flex items-center p-2  hover:text-rose-400 rounded-lg text-white  hover:bg-gray-700 group transition ease-in-out duration-150">
-                     <ion-icon name="log-out" class="text-2xl"></ion-icon>
-                     <span class="flex-1 ms-3 whitespace-nowrap">Logout</span>
-                 </a>
+                <form action="{{ route('logout') }}" method="POST">
+                    @method('POST')
+                    @csrf
+                    <button class="flex items-center p-2  hover:text-rose-400 rounded-lg text-white  hover:bg-gray-700 group transition ease-in-out duration-150 w-full">
+                        <ion-icon name="log-out" class="text-2xl"></ion-icon>
+                        <span class="ms-3 whitespace-nowrap">Logout</span>
+                    </button>
+                </form>
               </li>
         </div>
      </aside>
