@@ -22,8 +22,6 @@ class LoginController extends Controller
             return redirect()->intended('assets');
         }
 
-        dd('hello');
-
         return back()->with('loginError', 'Login Failed!');
 
     }
