@@ -4,8 +4,8 @@
 <section class="sm:ml-64">
     <div class="p-4">
         <div class="flex items-center px-2 py-8">
-            <ion-icon name="briefcase" class="text-2xl text-gray-800"></ion-icon>
-            <h1 class="font-bold uppercase text-xl ml-2 text-gray-800">Assets</h1>
+            <ion-icon name="briefcase" class="text-2xl text-gray-700"></ion-icon>
+            <h1 class="font-bold uppercase text-xl ml-2 text-gray-700">Assets</h1>
         </div>
         <div class="relative overflow-x-auto rounded-lg">
             <table class="w-full text-sm text-left rtl:text-right text-gray-400">
@@ -60,7 +60,12 @@
                             @endif
                         </td>
                         <td class="px-6 py-4">
-                            <button data-modal-target="{{'default-modal' . $asset->id}}" data-modal-toggle="{{'default-modal' . $asset->id}}"  type="button" class="focus:outline-none text-white  font-medium rounded-lg text-sm px-4 py-2 mb-2 bg-indigo-500 hover:bg-indigo-600 ">Edit</button>
+                            <button data-modal-target="{{'default-modal' . $asset->id}}" data-modal-toggle="{{'default-modal' . $asset->id}}"  type="button" class="focus:outline-none text-white  font-medium rounded-lg text-sm px-4 py-2 mb-2 bg-indigo-500 hover:bg-indigo-600 ">
+                                <div class="flex items-center justify-center">
+                                    <ion-icon name="create" class="mr-1 text-lg"></ion-icon>
+                                    <p>Edit</p>
+                                </div>
+                            </button>
                         </td>
                     </tr>
                     @include('assets.modal')

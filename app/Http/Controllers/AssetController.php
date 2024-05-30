@@ -30,12 +30,13 @@ class AssetController extends Controller
     {
         $asset = Asset::find($id);
 
-        $asset->name = $assetsRequest->name;
-        $asset->asset_type_id = $assetsRequest->asset_type;
-        $asset->serial_number = $assetsRequest->serial_number;
-        $asset->brand_model = $assetsRequest->brand_model;
-        $asset->asset_status_id = $assetsRequest->asset_status;
-        $asset->update();
+        $asset->update([
+            'name' => $assetsRequest->name,
+            'asset_type_id' => $assetsRequest->asset_type,
+            'serial_number' => $assetsRequest->serial_number,
+            'brand_model' => $assetsRequest->brand_model,
+            'asset_status_id' => $assetsRequest->asset_status,
+        ]);
 
         return redirect('/assets')->with('status', "Data updated Successfully");
     }

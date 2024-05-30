@@ -9,16 +9,16 @@ class Asset extends Model
 {
     use HasFactory;
 
-    // protected $fillable = [
-    //     'asset_name',
-    //     'asset_type_id',
-    //     'serial_number',
-    //     'brand_model',
-    //     'quantity',
-    //     'purchase_date',
-    //     'asset_status_id',
-    //     'delivery_date',
-    // ];
+    protected $fillable = [
+        'name',
+        'asset_type_id',
+        'serial_number',
+        'brand_model',
+        'quantity',
+        'purchase_date',
+        'asset_status_id',
+        'delivery_date',
+    ];
 
     public function assetType()
     {
