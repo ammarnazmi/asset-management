@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('serial_number');
             $table->string('brand_model');
             $table->integer('quantity');
+            $table->date('purchase_date')->nullable();
+            $table->date('delivery_date')->nullable();
             $table->unsignedBigInteger('asset_status_id')->index();
             $table->timestamps();
             $table->foreign('asset_type_id')->references('id')->on('asset_types');

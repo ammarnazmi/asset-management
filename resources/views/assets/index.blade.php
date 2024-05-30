@@ -71,5 +71,24 @@
         </div>
     </div>
 
+    @if(session('status'))
+    <div class="absolute right-3 top-3">
+        @include('assets.toast')
+    </div>
+    @endif
+
 </section>
+@endsection
+
+@section('script')
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var toast = document.getElementById('toast-success');
+        if(toast) {
+            setTimeout(function() {
+                toast.style.display = 'none';
+            }, 2000);
+        }
+    });
+</script>
 @endsection

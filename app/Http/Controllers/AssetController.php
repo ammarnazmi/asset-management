@@ -29,11 +29,14 @@ class AssetController extends Controller
     public function update(AssetsRequest $assetsRequest, $id)
     {
         $asset = Asset::find($id);
-        
+
         $asset->name = $assetsRequest->name;
-        // dd($assetsRequest->name);
+        $asset->asset_type_id = $assetsRequest->asset_type;
+        $asset->serial_number = $assetsRequest->serial_number;
+        $asset->brand_model = $assetsRequest->brand_model;
+        $asset->asset_status_id = $assetsRequest->asset_status;
         $asset->update();
 
-        return redirect('/assets');
+        return redirect('/assets')->with('status', "Data updated Successfully");
     }
 }

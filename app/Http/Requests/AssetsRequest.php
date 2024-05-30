@@ -25,6 +25,10 @@ class AssetsRequest extends FormRequest
     {
         return [
             'name' => 'required',
+            'serial_number' => 'required',
+            'brand_model' => 'required',
+            'asset_type' => 'required',
+            'asset_status' => 'required'
         ];
     }
 }
