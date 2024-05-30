@@ -22,7 +22,7 @@
             </div>
             <!-- Modal body -->
             <div class="p-4 md:p-5 space-y-4">
-                <form class="max-w-md mx-auto" action="{{ url('assets/'.$asset->id) }}" method="POST">
+                <form class=" mx-auto" action="{{ url('assets/'.$asset->id) }}" method="POST">
                     {{ csrf_field() }}
                     @method('PUT')
                     <div class="relative z-0 w-full mb-5 group">
@@ -64,7 +64,7 @@
                     </div>
                     <!-- Modal footer -->
                     <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b ">
-                        <button data-modal-hide="{{'default-modal' . $asset->id}}" type="submit"
+                        <button type="submit"
                             class="text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center  focus:ring-indigo-800">Save</button>
                         <button data-modal-hide="{{'default-modal' . $asset->id}}" type="button"
                             class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none  rounded-lg border  focus:z-10 focus:ring-4 focus:ring-gray-100  border-gray-600 hover:text-white hover:bg-gray-700">Cancel</button>

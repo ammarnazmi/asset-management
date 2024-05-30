@@ -22,7 +22,7 @@ class AssetStatus extends Seeder
             ],
             [
                 'id' => 2,
-                'name' => 'In Use',
+                'name' => 'Unavailable',
             ],
         ]);
     }

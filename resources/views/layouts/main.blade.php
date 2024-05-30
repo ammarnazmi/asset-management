@@ -35,13 +35,13 @@
            <ul class="space-y-2 font-medium">
 
               <li>
-               <a href="/assets" class="flex items-center p-2  hover:text-indigo-400 rounded-lg text-white hover:bg-gray-700 group transition ease-in-out duration-150">
+               <a href="{{ route('assets.index') }}" class="flex items-center p-2  hover:text-indigo-400 rounded-lg text-white hover:bg-gray-700 group transition ease-in-out duration-150">
                   <ion-icon name="briefcase" class="text-2xl"></ion-icon>
                     <span class="ms-3">Asset</span>
                  </a>
               </li>
               <li>
-               <a href="/purchase" class="flex items-center p-2  hover:text-indigo-400 rounded-lg text-white  hover:bg-gray-700 group transition ease-in-out duration-150">
+               <a href="{{ route('purchase.index') }}" class="flex items-center p-2  hover:text-indigo-400 rounded-lg text-white  hover:bg-gray-700 group transition ease-in-out duration-150">
                      <ion-icon name="wallet" class="text-2xl "></ion-icon>
                      <span class="flex-1 ms-3 whitespace-nowrap">Purchase</span>
                  </a>
