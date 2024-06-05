@@ -23,6 +23,8 @@ class AssetSeeder extends Seeder
                 'brand_model' => 'lenovo',
                 'quantity' => 1,
                 'asset_status_id' => 2,
+                'purchase_date' => '2024-06-19',
+                'delivery_date' => '2024-06-19',
             ],
             [
                 'name' => 'Chair',
@@ -31,6 +33,8 @@ class AssetSeeder extends Seeder
                 'brand_model' => 'Todak',
                 'quantity' => 1,
                 'asset_status_id' => 2,
+                'purchase_date' => '2024-06-19',
+                'delivery_date' => '2024-06-19',
             ],
             [
                 'name' => 'Desk',
@@ -39,6 +43,8 @@ class AssetSeeder extends Seeder
                 'brand_model' => 'IKEA',
                 'quantity' => 1,
                 'asset_status_id' => 1,
+                'purchase_date' => '2024-06-19',
+                'delivery_date' => '2024-06-19',
             ],
         ]);
     }

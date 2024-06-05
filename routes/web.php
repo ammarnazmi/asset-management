@@ -22,6 +22,7 @@ Route::middleware('auth')->group(function() {
     Route::prefix('assets')->name('assets.')->controller(AssetController::class)->group(function() {
         Route::get('/', 'index')->name('index');
         Route::put('{id}', 'update')->name('update');
+        Route::get('downloadCsv', 'downloadCsv')->name('csv');
     });
 
     Route::prefix('purchase')->name('purchase.')->controller(PurchaseController::class)->group(function() {
@@ -30,4 +31,5 @@ Route::middleware('auth')->group(function() {
         Route::put('{id}', 'update')->name('update');
         Route::get('{id}', 'destroy')->name('destroy');
     });
+
 });

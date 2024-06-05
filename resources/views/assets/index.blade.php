@@ -7,6 +7,16 @@
             <ion-icon name="briefcase" class="text-2xl text-gray-700"></ion-icon>
             <h1 class="font-bold uppercase text-xl ml-2 text-gray-700">Assets</h1>
         </div>
+        <div class="flex justify-end">
+            <a href="{{route('assets.csv')}}">
+                <button type="button" class="focus:outline-none text-white  font-medium rounded-lg text-sm px-4 py-2 mb-2 bg-indigo-500 hover:bg-indigo-600 ">
+                    <div class="flex items-center justify-center">
+                        <ion-icon name="download" class="mr-1 text-lg"></ion-icon>
+                        <p>CSV</p>
+                    </div>
+                </button>
+            </a>
+        </div>
         <div class="relative overflow-x-auto rounded-lg">
             <table class="w-full text-sm text-left rtl:text-right text-gray-400">
                 <thead class="text-xs uppercase bg-gray-700 text-gray-400">

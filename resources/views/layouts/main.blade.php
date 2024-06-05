@@ -47,18 +47,6 @@
                  </a>
               </li>
               <li>
-                  <a href="#" class="flex items-center p-2  hover:text-indigo-400 rounded-lg text-white  hover:bg-gray-700 group transition ease-in-out duration-150">
-                     <ion-icon name="document-text" class="text-2xl"></ion-icon>
-                     <span class="flex-1 ms-3 whitespace-nowrap">reports</span>
-                 </a>
-              </li>
-              <li>
-               <a href="#" class="flex items-center p-2  hover:text-indigo-400 rounded-lg text-white  hover:bg-gray-700 group transition ease-in-out duration-150">
-                  <ion-icon name="person" class="text-2xl"></ion-icon>
-                    <span class="flex-1 ms-3 whitespace-nowrap">User</span>
-                 </a>
-              </li>
-              <li>
                 <form action="{{ route('logout') }}" method="POST">
                     @method('POST')
                     @csrf

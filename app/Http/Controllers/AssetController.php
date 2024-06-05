@@ -16,6 +16,7 @@ class AssetController extends Controller
             'assetType',
             'assetStatus',
         ])->get();
+
         $assetStatuses = AssetStatus::all();
         $assetTypes = AssetType::all();
 
@@ -39,5 +40,26 @@ class AssetController extends Controller
         ]);
 
         return redirect('/assets')->with('status', "Data updated Successfully");
+    }
+
+    public function downloadCsv()
+    {
+        $data = Asset::with([
+            'assetType',
+            'assetStatus',
+        ])->get();
+
+        $fileName = "assets.csv";
+        $filePath = fopen($fileName, "w+");
+        fputcsv($filePath, array('Name', 'Type', 'Serial Number', 'Brand Model', 'Quantity', 'Status', 'Purchase Date', 'Delivery Date'));
+
+        foreach($data as $row) {
+            fputcsv($filePath, array($row->name, $row->assetType->name, $row->serial_number,
+            $row->brand_model, $row->quantity, $row->assetStatus->name, $row->purchase_date, $row->delivery_date));
+        }
+
+        fclose($filePath);
+        $headers = array('Content-type' => 'text/csv');
+        return response()->download($fileName, 'assets.csv', $headers);
     }
 }
