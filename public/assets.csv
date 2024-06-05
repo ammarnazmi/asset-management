@@ -1,4 +1,3 @@
 Name,Type,"Serial Number","Brand Model",Quantity,Status,"Purchase Date","Delivery Date"
 Laptop,"ICT Equipment",12546,lenovo,1,Unavailable,2024-06-19,2024-06-19
-Chair,"Laboratory Equipment",2435,Todak,1,Unavailable,2024-06-27,2024-06-19
-Desk,Furniture,56564,IKEA,1,Available,2024-06-19,2024-06-19
+Chair,Furniture,2435,Todak,1,Unavailable,2024-06-19,2024-06-19

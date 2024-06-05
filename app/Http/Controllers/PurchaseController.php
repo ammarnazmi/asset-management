@@ -38,7 +38,7 @@ class PurchaseController extends Controller
             'asset_status_id' => $assetsStoreRequest->asset_status,
             'purchase_date' => Carbon::createFromFormat('m/d/Y', $assetsStoreRequest->purchase_date)->format('Y-m-d'),
             'delivery_date' => Carbon::createFromFormat('m/d/Y', $assetsStoreRequest->delivery_date)->format('Y-m-d'),
-            'quantity' => $assetsStoreRequest->quantity,
+            'quantity' => ($purchaseUpdateRequest->quantity > 0 ? $purchaseUpdateRequest->quantity : 1),
         ]);
 
         return redirect('/purchase')->with('status', "created");
@@ -56,7 +56,7 @@ class PurchaseController extends Controller
             'asset_status_id' => $purchaseUpdateRequest->asset_status,
             'purchase_date' => Carbon::createFromFormat('m/d/Y', $purchaseUpdateRequest->purchase_date)->format('Y-m-d'),
             'delivery_date' => Carbon::createFromFormat('m/d/Y', $purchaseUpdateRequest->delivery_date)->format('Y-m-d'),
-            'quantity' => $purchaseUpdateRequest->quantity,
+            'quantity' => ($purchaseUpdateRequest->quantity > 0 ? $purchaseUpdateRequest->quantity : 1),
         ]);
 
         return redirect('/purchase')->with('status', "updated");
